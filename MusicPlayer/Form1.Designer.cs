@@ -35,8 +35,8 @@
             this.listBoxSongs = new System.Windows.Forms.ListBox();
             this.btnSelectSongs = new System.Windows.Forms.Button();
             this.lblBottom = new System.Windows.Forms.Label();
-            this.windowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.labelBottom = new System.Windows.Forms.Label();
+            this.windowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).BeginInit();
@@ -88,6 +88,7 @@
             this.listBoxSongs.Name = "listBoxSongs";
             this.listBoxSongs.Size = new System.Drawing.Size(374, 364);
             this.listBoxSongs.TabIndex = 1;
+            this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged);
             // 
             // btnSelectSongs
             // 
@@ -117,17 +118,6 @@
             this.lblBottom.TabIndex = 4;
             this.lblBottom.Text = "Developed By Raul Finana";
             // 
-            // windowsMediaPlayer
-            // 
-            this.windowsMediaPlayer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.windowsMediaPlayer.Enabled = true;
-            this.windowsMediaPlayer.Location = new System.Drawing.Point(7, 63);
-            this.windowsMediaPlayer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.windowsMediaPlayer.Name = "windowsMediaPlayer";
-            this.windowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("windowsMediaPlayer.OcxState")));
-            this.windowsMediaPlayer.Size = new System.Drawing.Size(625, 425);
-            this.windowsMediaPlayer.TabIndex = 3;
-            // 
             // labelBottom
             // 
             this.labelBottom.AutoSize = true;
@@ -138,6 +128,18 @@
             this.labelBottom.Size = new System.Drawing.Size(221, 20);
             this.labelBottom.TabIndex = 5;
             this.labelBottom.Text = "Developed By Raul Finana";
+            // 
+            // windowsMediaPlayer
+            // 
+            this.windowsMediaPlayer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.windowsMediaPlayer.Enabled = true;
+            this.windowsMediaPlayer.Location = new System.Drawing.Point(7, 63);
+            this.windowsMediaPlayer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.windowsMediaPlayer.Name = "windowsMediaPlayer";
+            this.windowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("windowsMediaPlayer.OcxState")));
+            this.windowsMediaPlayer.Size = new System.Drawing.Size(625, 425);
+            this.windowsMediaPlayer.TabIndex = 3;
+            this.windowsMediaPlayer.Enter += new System.EventHandler(this.windowsMediaPlayer_Enter);
             // 
             // MusicPlayer
             // 
