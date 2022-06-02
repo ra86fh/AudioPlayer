@@ -66,7 +66,7 @@ namespace MusicPlayer
 
         private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            windowsMediaPlayer.URL = paths[listBoxSongs.SelectedIndex];
         }
 
         private void windowsMediaPlayer_Enter(object sender, EventArgs e)
@@ -81,9 +81,29 @@ namespace MusicPlayer
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            // Play
-            windowsMediaPlayer.URL = paths[listBoxSongs.SelectedIndex];
+
+            windowsMediaPlayer.Ctlcontrols.play();
           
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            windowsMediaPlayer.Ctlcontrols.pause();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            windowsMediaPlayer.Ctlcontrols.stop();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            windowsMediaPlayer.Ctlcontrols.previous();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

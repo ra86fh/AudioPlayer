@@ -37,28 +37,34 @@
             this.lblBottom = new System.Windows.Forms.Label();
             this.labelBottom = new System.Windows.Forms.Label();
             this.windowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
-            this.trackVolume = new System.Windows.Forms.TrackBar();
+            this.lblVolume = new System.Windows.Forms.TrackBar();
             this.btnPlay = new System.Windows.Forms.PictureBox();
             this.btnPause = new System.Windows.Forms.PictureBox();
             this.btnStop = new System.Windows.Forms.PictureBox();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.lblEnd = new System.Windows.Forms.Label();
+            this.labelStart = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackVolume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.TopPanel.BackColor = System.Drawing.Color.Lime;
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Controls.Add(this.lblLogo);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -94,31 +100,33 @@
             // 
             // listBoxSongs
             // 
+            this.listBoxSongs.BackColor = System.Drawing.Color.MediumBlue;
             this.listBoxSongs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxSongs.ForeColor = System.Drawing.Color.Lime;
             this.listBoxSongs.FormattingEnabled = true;
             this.listBoxSongs.ItemHeight = 24;
-            this.listBoxSongs.Location = new System.Drawing.Point(646, 74);
+            this.listBoxSongs.Location = new System.Drawing.Point(382, 169);
             this.listBoxSongs.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.listBoxSongs.Name = "listBoxSongs";
-            this.listBoxSongs.Size = new System.Drawing.Size(374, 364);
+            this.listBoxSongs.Size = new System.Drawing.Size(643, 292);
             this.listBoxSongs.TabIndex = 1;
             this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged);
             // 
             // btnSelectSongs
             // 
             this.btnSelectSongs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelectSongs.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSelectSongs.BackColor = System.Drawing.Color.Black;
             this.btnSelectSongs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectSongs.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSelectSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectSongs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectSongs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSelectSongs.Location = new System.Drawing.Point(646, 440);
+            this.btnSelectSongs.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectSongs.Image")));
+            this.btnSelectSongs.Location = new System.Drawing.Point(975, 492);
             this.btnSelectSongs.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnSelectSongs.Name = "btnSelectSongs";
-            this.btnSelectSongs.Size = new System.Drawing.Size(374, 59);
+            this.btnSelectSongs.Size = new System.Drawing.Size(50, 50);
             this.btnSelectSongs.TabIndex = 2;
-            this.btnSelectSongs.Text = "Select Songs";
             this.btnSelectSongs.UseVisualStyleBackColor = false;
             this.btnSelectSongs.Click += new System.EventHandler(this.btnSelectSongs_Click);
             // 
@@ -138,8 +146,8 @@
             // 
             this.labelBottom.AutoSize = true;
             this.labelBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBottom.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelBottom.Location = new System.Drawing.Point(405, 540);
+            this.labelBottom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.labelBottom.Location = new System.Drawing.Point(8, 533);
             this.labelBottom.Name = "labelBottom";
             this.labelBottom.Size = new System.Drawing.Size(221, 20);
             this.labelBottom.TabIndex = 5;
@@ -149,31 +157,33 @@
             // 
             this.windowsMediaPlayer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.windowsMediaPlayer.Enabled = true;
-            this.windowsMediaPlayer.Location = new System.Drawing.Point(7, 74);
+            this.windowsMediaPlayer.Location = new System.Drawing.Point(0, 41);
             this.windowsMediaPlayer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.windowsMediaPlayer.Name = "windowsMediaPlayer";
             this.windowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("windowsMediaPlayer.OcxState")));
-            this.windowsMediaPlayer.Size = new System.Drawing.Size(588, 364);
+            this.windowsMediaPlayer.Size = new System.Drawing.Size(1038, 126);
             this.windowsMediaPlayer.TabIndex = 3;
             this.windowsMediaPlayer.Enter += new System.EventHandler(this.windowsMediaPlayer_Enter);
             // 
-            // trackVolume
+            // lblVolume
             // 
-            this.trackVolume.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trackVolume.Location = new System.Drawing.Point(598, 74);
-            this.trackVolume.Name = "trackVolume";
-            this.trackVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackVolume.Size = new System.Drawing.Size(45, 364);
-            this.trackVolume.TabIndex = 6;
-            this.trackVolume.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.lblVolume.BackColor = System.Drawing.Color.Black;
+            this.lblVolume.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblVolume.Location = new System.Drawing.Point(334, 169);
+            this.lblVolume.Name = "lblVolume";
+            this.lblVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.lblVolume.Size = new System.Drawing.Size(45, 255);
+            this.lblVolume.TabIndex = 6;
+            this.lblVolume.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
             // btnPlay
             // 
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
-            this.btnPlay.Location = new System.Drawing.Point(276, 449);
+            this.btnPlay.Location = new System.Drawing.Point(494, 489);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(50, 50);
+            this.btnPlay.Size = new System.Drawing.Size(55, 55);
+            this.btnPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPlay.TabIndex = 7;
             this.btnPlay.TabStop = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
@@ -182,69 +192,134 @@
             // 
             this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPause.Image = ((System.Drawing.Image)(resources.GetObject("btnPause.Image")));
-            this.btnPause.Location = new System.Drawing.Point(332, 449);
+            this.btnPause.Location = new System.Drawing.Point(550, 489);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(50, 50);
+            this.btnPause.Size = new System.Drawing.Size(55, 55);
+            this.btnPause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPause.TabIndex = 8;
             this.btnPause.TabStop = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // btnStop
             // 
             this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStop.Image = ((System.Drawing.Image)(resources.GetObject("btnStop.Image")));
-            this.btnStop.Location = new System.Drawing.Point(220, 449);
+            this.btnStop.Location = new System.Drawing.Point(438, 489);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(50, 50);
+            this.btnStop.Size = new System.Drawing.Size(55, 55);
+            this.btnStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnStop.TabIndex = 9;
             this.btnStop.TabStop = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnNext
             // 
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(388, 449);
+            this.btnNext.Location = new System.Drawing.Point(606, 489);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(50, 50);
+            this.btnNext.Size = new System.Drawing.Size(55, 55);
+            this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnNext.TabIndex = 10;
             this.btnNext.TabStop = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnBack
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(164, 449);
+            this.btnBack.Location = new System.Drawing.Point(382, 489);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(50, 50);
+            this.btnBack.Size = new System.Drawing.Size(55, 55);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 11;
             this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(605, 442);
+            this.pictureBox2.Location = new System.Drawing.Point(341, 430);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
+            // picture
+            // 
+            this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
+            this.picture.Location = new System.Drawing.Point(12, 169);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(314, 292);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture.TabIndex = 13;
+            this.picture.TabStop = false;
+            // 
+            // lblEnd
+            // 
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.BackColor = System.Drawing.Color.Black;
+            this.lblEnd.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnd.ForeColor = System.Drawing.Color.Lime;
+            this.lblEnd.Location = new System.Drawing.Point(894, 75);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(144, 60);
+            this.lblEnd.TabIndex = 14;
+            this.lblEnd.Text = "00:00";
+            // 
+            // labelStart
+            // 
+            this.labelStart.AutoSize = true;
+            this.labelStart.BackColor = System.Drawing.Color.Black;
+            this.labelStart.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStart.ForeColor = System.Drawing.Color.Lime;
+            this.labelStart.Location = new System.Drawing.Point(0, 75);
+            this.labelStart.Name = "labelStart";
+            this.labelStart.Size = new System.Drawing.Size(144, 60);
+            this.labelStart.TabIndex = 15;
+            this.labelStart.Text = "00:00";
+            // 
+            // progressBar
+            // 
+            this.progressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.progressBar.ForeColor = System.Drawing.Color.MediumBlue;
+            this.progressBar.Location = new System.Drawing.Point(12, 467);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(1013, 15);
+            this.progressBar.TabIndex = 16;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1038, 448);
+            this.panel1.TabIndex = 17;
+            // 
             // MusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(1038, 562);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.labelStart);
+            this.Controls.Add(this.lblEnd);
+            this.Controls.Add(this.picture);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnPlay);
-            this.Controls.Add(this.trackVolume);
+            this.Controls.Add(this.lblVolume);
             this.Controls.Add(this.labelBottom);
             this.Controls.Add(this.lblBottom);
             this.Controls.Add(this.windowsMediaPlayer);
             this.Controls.Add(this.btnSelectSongs);
             this.Controls.Add(this.listBoxSongs);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "MusicPlayer";
@@ -254,13 +329,14 @@
             this.TopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackVolume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblVolume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPause)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,13 +352,18 @@
         private AxWMPLib.AxWindowsMediaPlayer windowsMediaPlayer;
         private System.Windows.Forms.Label lblBottom;
         private System.Windows.Forms.Label labelBottom;
-        private System.Windows.Forms.TrackBar trackVolume;
+        private System.Windows.Forms.TrackBar lblVolume;
         private System.Windows.Forms.PictureBox btnPlay;
         private System.Windows.Forms.PictureBox btnPause;
         private System.Windows.Forms.PictureBox btnStop;
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.Label lblEnd;
+        private System.Windows.Forms.Label labelStart;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
