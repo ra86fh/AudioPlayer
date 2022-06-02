@@ -1,27 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using System.Drawing;
 
 namespace MusicPlayer
 {
     public partial class MusicPlayer : Form
     {
-      
+
         public MusicPlayer()
         {
             InitializeComponent();
             windowsMediaPlayer.Ctlenabled = false;
             windowsMediaPlayer.uiMode = "none";
+            lblVolume.Value = 50;
         }
 
-       
+
 
         // Array of paths and songs
         String[] paths = { };
@@ -67,11 +63,20 @@ namespace MusicPlayer
         private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
             windowsMediaPlayer.URL = paths[listBoxSongs.SelectedIndex];
-        }
+            windowsMediaPlayer.Ctlcontrols.play();
 
-        private void windowsMediaPlayer_Enter(object sender, EventArgs e)
-        {
-           
+            // SHOW SONG PICTURE
+            try
+            {
+                var file = TagLib.File.Create(paths[listBoxSongs.SelectedIndex]);
+                var bin = (byte[])(file.Tag.Pictures[0].Data.Data);
+                picture.Image = Image.FromStream(new MemoryStream(bin));
+            }
+            catch
+            {
+
+
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -83,7 +88,7 @@ namespace MusicPlayer
         {
 
             windowsMediaPlayer.Ctlcontrols.play();
-          
+
         }
 
         private void btnPause_Click(object sender, EventArgs e)
@@ -94,16 +99,56 @@ namespace MusicPlayer
         private void btnStop_Click(object sender, EventArgs e)
         {
             windowsMediaPlayer.Ctlcontrols.stop();
+            progressBar.Value = 0;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            windowsMediaPlayer.Ctlcontrols.previous();
+            if (listBoxSongs.SelectedIndex > 0)
+            {
+                listBoxSongs.SelectedIndex = listBoxSongs.SelectedIndex - 1;
+            }
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            if (listBoxSongs.SelectedIndex < listBoxSongs.Items.Count - 1)
+            {
+                listBoxSongs.SelectedIndex = listBoxSongs.SelectedIndex + 1;
+            }
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (windowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                progressBar.Maximum = (int)windowsMediaPlayer.Ctlcontrols.currentItem.duration;
+                progressBar.Value = (int)windowsMediaPlayer.Ctlcontrols.currentPosition;
+
+                try
+                {
+                    labelStart.Text = windowsMediaPlayer.Ctlcontrols.currentPositionString;
+                    labelEnd.Text = windowsMediaPlayer.Ctlcontrols.currentItem.durationString.ToString();
+                }
+                catch
+                {
+
+
+                }
+            }
+
+        }
+
+        private void lblVolume_Scroll(object sender, EventArgs e)
+        {
+            windowsMediaPlayer.settings.volume = lblVolume.Value;
+            labelVolume.Text = lblVolume.Value.ToString() + "%";
+        }
+
+        private void progressBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            windowsMediaPlayer.Ctlcontrols.currentPosition = windowsMediaPlayer.currentMedia.duration * e.X / progressBar.Width;
         }
     }
 }
