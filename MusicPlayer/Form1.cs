@@ -17,40 +17,46 @@ namespace MusicPlayer
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         // Array of paths and songs
-        String[] paths, files;
+        String[] paths = { };
+        String[] files = { };
 
         String[] nameParts;
         string songName = "";
+        int x = 0;
+
         private void btnSelectSongs_Click(object sender, EventArgs e)
         {
+            listBoxSongs.Items.Clear();
             // Select song
             OpenFileDialog ofd = new OpenFileDialog();
 
             // select multiple songs
             ofd.Multiselect = true;
 
+
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                
-                files = ofd.SafeFileNames; // Saves name of track in files array
-                paths = ofd.FileNames; // Saves path of track in paths array
+
+                files = files.Concat(ofd.SafeFileNames).ToArray();
+                paths = paths.Concat(ofd.FileNames).ToArray();
+
 
                 //Display Music Titles in ListBox
                 for (int i = 0; i < files.Length; i++)
                 {
-                    songName=files[i].ToString();
+
+
+                    songName = files[i].ToString();
                     nameParts = songName.Split('.');
-                    listBoxSongs.Items.Add(nameParts[0]);
+                    x = i + 1;
+                    listBoxSongs.Items.Add(x + ". " + nameParts[0]);
+
                 }
 
-            
             }
+
         }
 
         private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
