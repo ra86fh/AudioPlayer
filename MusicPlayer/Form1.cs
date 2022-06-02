@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MusicPlayer
 {
     public partial class MusicPlayer : Form
     {
+      
         public MusicPlayer()
         {
             InitializeComponent();
+            windowsMediaPlayer.Ctlenabled = false;
+            windowsMediaPlayer.uiMode = "none";
         }
 
+       
 
         // Array of paths and songs
         String[] paths = { };
@@ -61,18 +66,24 @@ namespace MusicPlayer
 
         private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Play
-            windowsMediaPlayer.URL = paths[listBoxSongs.SelectedIndex];
+           
         }
 
         private void windowsMediaPlayer_Enter(object sender, EventArgs e)
         {
-
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            // Play
+            windowsMediaPlayer.URL = paths[listBoxSongs.SelectedIndex];
+          
         }
     }
 }
