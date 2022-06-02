@@ -76,7 +76,6 @@
             this.lblLogo.Size = new System.Drawing.Size(185, 25);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "Music Player App";
-            this.lblLogo.Click += new System.EventHandler(this.label1_Click);
             // 
             // listBoxSongs
             // 
@@ -93,10 +92,10 @@
             // btnSelectSongs
             // 
             this.btnSelectSongs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelectSongs.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSelectSongs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSelectSongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectSongs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectSongs.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSelectSongs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSelectSongs.Location = new System.Drawing.Point(646, 429);
             this.btnSelectSongs.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnSelectSongs.Name = "btnSelectSongs";
