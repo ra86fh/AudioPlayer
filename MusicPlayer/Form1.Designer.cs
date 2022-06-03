@@ -162,11 +162,11 @@
             // 
             this.lblVolume.BackColor = System.Drawing.Color.Black;
             this.lblVolume.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblVolume.Location = new System.Drawing.Point(96, 75);
+            this.lblVolume.Location = new System.Drawing.Point(96, 18);
             this.lblVolume.Maximum = 100;
             this.lblVolume.Name = "lblVolume";
             this.lblVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.lblVolume.Size = new System.Drawing.Size(45, 332);
+            this.lblVolume.Size = new System.Drawing.Size(45, 398);
             this.lblVolume.TabIndex = 6;
             this.lblVolume.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.lblVolume.Value = 70;
@@ -235,7 +235,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(69, 383);
+            this.pictureBox2.Location = new System.Drawing.Point(69, 404);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +305,7 @@
             this.labelVolume.AutoSize = true;
             this.labelVolume.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVolume.ForeColor = System.Drawing.Color.White;
-            this.labelVolume.Location = new System.Drawing.Point(59, 398);
+            this.labelVolume.Location = new System.Drawing.Point(59, 419);
             this.labelVolume.Name = "labelVolume";
             this.labelVolume.Size = new System.Drawing.Size(50, 36);
             this.labelVolume.TabIndex = 0;
