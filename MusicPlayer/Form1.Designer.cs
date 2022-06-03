@@ -37,7 +37,6 @@
             this.btnSelectSongs = new System.Windows.Forms.Button();
             this.lblBottom = new System.Windows.Forms.Label();
             this.labelBottom = new System.Windows.Forms.Label();
-            this.windowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.lblVolume = new System.Windows.Forms.TrackBar();
             this.btnPlay = new System.Windows.Forms.PictureBox();
             this.btnPause = new System.Windows.Forms.PictureBox();
@@ -52,9 +51,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelVolume = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.windowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPause)).BeginInit();
@@ -64,11 +63,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.Lime;
+            this.TopPanel.BackColor = System.Drawing.Color.White;
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Controls.Add(this.lblLogo);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -104,15 +104,16 @@
             // 
             // listBoxSongs
             // 
-            this.listBoxSongs.BackColor = System.Drawing.Color.MediumBlue;
-            this.listBoxSongs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxSongs.ForeColor = System.Drawing.Color.Lime;
+            this.listBoxSongs.AllowDrop = true;
+            this.listBoxSongs.BackColor = System.Drawing.Color.Black;
+            this.listBoxSongs.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxSongs.ForeColor = System.Drawing.Color.White;
             this.listBoxSongs.FormattingEnabled = true;
-            this.listBoxSongs.ItemHeight = 24;
-            this.listBoxSongs.Location = new System.Drawing.Point(382, 169);
+            this.listBoxSongs.ItemHeight = 29;
+            this.listBoxSongs.Location = new System.Drawing.Point(618, 0);
             this.listBoxSongs.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.listBoxSongs.Name = "listBoxSongs";
-            this.listBoxSongs.Size = new System.Drawing.Size(643, 292);
+            this.listBoxSongs.Size = new System.Drawing.Size(271, 439);
             this.listBoxSongs.TabIndex = 1;
             this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged);
             // 
@@ -126,10 +127,10 @@
             this.btnSelectSongs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectSongs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSelectSongs.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectSongs.Image")));
-            this.btnSelectSongs.Location = new System.Drawing.Point(975, 492);
+            this.btnSelectSongs.Location = new System.Drawing.Point(874, 364);
             this.btnSelectSongs.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnSelectSongs.Name = "btnSelectSongs";
-            this.btnSelectSongs.Size = new System.Drawing.Size(50, 50);
+            this.btnSelectSongs.Size = new System.Drawing.Size(79, 63);
             this.btnSelectSongs.TabIndex = 2;
             this.btnSelectSongs.UseVisualStyleBackColor = false;
             this.btnSelectSongs.Click += new System.EventHandler(this.btnSelectSongs_Click);
@@ -149,34 +150,23 @@
             // labelBottom
             // 
             this.labelBottom.AutoSize = true;
-            this.labelBottom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBottom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelBottom.Location = new System.Drawing.Point(3, 539);
+            this.labelBottom.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBottom.ForeColor = System.Drawing.Color.Black;
+            this.labelBottom.Location = new System.Drawing.Point(409, 539);
             this.labelBottom.Name = "labelBottom";
-            this.labelBottom.Size = new System.Drawing.Size(221, 20);
+            this.labelBottom.Size = new System.Drawing.Size(227, 36);
             this.labelBottom.TabIndex = 5;
             this.labelBottom.Text = "Developed By Raul Finana";
-            // 
-            // windowsMediaPlayer
-            // 
-            this.windowsMediaPlayer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.windowsMediaPlayer.Enabled = true;
-            this.windowsMediaPlayer.Location = new System.Drawing.Point(30, 44);
-            this.windowsMediaPlayer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.windowsMediaPlayer.Name = "windowsMediaPlayer";
-            this.windowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("windowsMediaPlayer.OcxState")));
-            this.windowsMediaPlayer.Size = new System.Drawing.Size(977, 123);
-            this.windowsMediaPlayer.TabIndex = 3;
             // 
             // lblVolume
             // 
             this.lblVolume.BackColor = System.Drawing.Color.Black;
             this.lblVolume.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblVolume.Location = new System.Drawing.Point(334, 182);
+            this.lblVolume.Location = new System.Drawing.Point(96, 75);
             this.lblVolume.Maximum = 100;
             this.lblVolume.Name = "lblVolume";
             this.lblVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.lblVolume.Size = new System.Drawing.Size(45, 251);
+            this.lblVolume.Size = new System.Drawing.Size(45, 332);
             this.lblVolume.TabIndex = 6;
             this.lblVolume.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.lblVolume.Value = 70;
@@ -245,18 +235,19 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(343, 430);
+            this.pictureBox2.Location = new System.Drawing.Point(69, 383);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
             // picture
             // 
             this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
-            this.picture.Location = new System.Drawing.Point(12, 169);
+            this.picture.Location = new System.Drawing.Point(147, -4);
             this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(314, 292);
+            this.picture.Size = new System.Drawing.Size(474, 443);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture.TabIndex = 13;
             this.picture.TabStop = false;
@@ -264,39 +255,48 @@
             // labelEnd
             // 
             this.labelEnd.AutoSize = true;
-            this.labelEnd.BackColor = System.Drawing.Color.Black;
-            this.labelEnd.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnd.ForeColor = System.Drawing.Color.Lime;
-            this.labelEnd.Location = new System.Drawing.Point(891, 75);
+            this.labelEnd.BackColor = System.Drawing.Color.Transparent;
+            this.labelEnd.Font = new System.Drawing.Font("Javanese Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEnd.ForeColor = System.Drawing.Color.Black;
+            this.labelEnd.Location = new System.Drawing.Point(667, 491);
             this.labelEnd.Name = "labelEnd";
-            this.labelEnd.Size = new System.Drawing.Size(0, 60);
+            this.labelEnd.Size = new System.Drawing.Size(67, 54);
             this.labelEnd.TabIndex = 14;
+            this.labelEnd.Text = "xxxx";
             // 
             // labelStart
             // 
             this.labelStart.AutoSize = true;
-            this.labelStart.BackColor = System.Drawing.Color.Black;
-            this.labelStart.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStart.ForeColor = System.Drawing.Color.Lime;
-            this.labelStart.Location = new System.Drawing.Point(7, 75);
+            this.labelStart.BackColor = System.Drawing.Color.Transparent;
+            this.labelStart.Font = new System.Drawing.Font("Javanese Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStart.ForeColor = System.Drawing.Color.Black;
+            this.labelStart.Location = new System.Drawing.Point(297, 492);
             this.labelStart.Name = "labelStart";
-            this.labelStart.Size = new System.Drawing.Size(0, 60);
+            this.labelStart.Size = new System.Drawing.Size(67, 54);
             this.labelStart.TabIndex = 15;
+            this.labelStart.Text = "xxxx";
             // 
             // progressBar
             // 
             this.progressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.progressBar.ForeColor = System.Drawing.Color.MediumBlue;
-            this.progressBar.Location = new System.Drawing.Point(12, 467);
+            this.progressBar.Location = new System.Drawing.Point(147, 427);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(1013, 15);
+            this.progressBar.Size = new System.Drawing.Size(742, 16);
             this.progressBar.TabIndex = 16;
             this.progressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.progressBar_MouseDown);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.progressBar);
+            this.panel1.Controls.Add(this.picture);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.labelVolume);
+            this.panel1.Controls.Add(this.lblVolume);
+            this.panel1.Controls.Add(this.listBoxSongs);
+            this.panel1.Controls.Add(this.btnSelectSongs);
+            this.panel1.Controls.Add(this.windowsMediaPlayer);
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1038, 448);
@@ -305,11 +305,11 @@
             // labelVolume
             // 
             this.labelVolume.AutoSize = true;
-            this.labelVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVolume.ForeColor = System.Drawing.Color.Lime;
-            this.labelVolume.Location = new System.Drawing.Point(340, 131);
+            this.labelVolume.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVolume.ForeColor = System.Drawing.Color.White;
+            this.labelVolume.Location = new System.Drawing.Point(59, 398);
             this.labelVolume.Name = "labelVolume";
-            this.labelVolume.Size = new System.Drawing.Size(30, 13);
+            this.labelVolume.Size = new System.Drawing.Size(50, 36);
             this.labelVolume.TabIndex = 0;
             this.labelVolume.Text = "50%";
             // 
@@ -318,28 +318,31 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // windowsMediaPlayer
+            // 
+            this.windowsMediaPlayer.Enabled = true;
+            this.windowsMediaPlayer.Location = new System.Drawing.Point(2, 1);
+            this.windowsMediaPlayer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.windowsMediaPlayer.Name = "windowsMediaPlayer";
+            this.windowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("windowsMediaPlayer.OcxState")));
+            this.windowsMediaPlayer.Size = new System.Drawing.Size(1036, 446);
+            this.windowsMediaPlayer.TabIndex = 3;
+            // 
             // MusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lime;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1038, 562);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.labelStart);
-            this.Controls.Add(this.labelEnd);
-            this.Controls.Add(this.picture);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.labelStart);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnPlay);
-            this.Controls.Add(this.lblVolume);
             this.Controls.Add(this.labelBottom);
             this.Controls.Add(this.lblBottom);
-            this.Controls.Add(this.windowsMediaPlayer);
-            this.Controls.Add(this.btnSelectSongs);
-            this.Controls.Add(this.listBoxSongs);
+            this.Controls.Add(this.labelEnd);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -350,7 +353,6 @@
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblVolume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPause)).EndInit();
@@ -361,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.windowsMediaPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
