@@ -50,8 +50,8 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelVolume = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.windowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblVolume)).BeginInit();
@@ -260,9 +260,8 @@
             this.labelEnd.ForeColor = System.Drawing.Color.Black;
             this.labelEnd.Location = new System.Drawing.Point(667, 491);
             this.labelEnd.Name = "labelEnd";
-            this.labelEnd.Size = new System.Drawing.Size(67, 54);
+            this.labelEnd.Size = new System.Drawing.Size(0, 54);
             this.labelEnd.TabIndex = 14;
-            this.labelEnd.Text = "xxxx";
             // 
             // labelStart
             // 
@@ -272,9 +271,8 @@
             this.labelStart.ForeColor = System.Drawing.Color.Black;
             this.labelStart.Location = new System.Drawing.Point(297, 492);
             this.labelStart.Name = "labelStart";
-            this.labelStart.Size = new System.Drawing.Size(67, 54);
+            this.labelStart.Size = new System.Drawing.Size(0, 54);
             this.labelStart.TabIndex = 15;
-            this.labelStart.Text = "xxxx";
             // 
             // progressBar
             // 
@@ -313,11 +311,6 @@
             this.labelVolume.TabIndex = 0;
             this.labelVolume.Text = "50%";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // windowsMediaPlayer
             // 
             this.windowsMediaPlayer.Enabled = true;
@@ -327,6 +320,11 @@
             this.windowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("windowsMediaPlayer.OcxState")));
             this.windowsMediaPlayer.Size = new System.Drawing.Size(1036, 446);
             this.windowsMediaPlayer.TabIndex = 3;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MusicPlayer
             // 
