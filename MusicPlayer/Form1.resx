@@ -157,17 +157,6 @@
         29vyTwGwtbUll1jk+Gr5Q/wHfJjDrZH88FwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="windowsMediaPlayer.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuQAAAAIB
-        AAAAAQAAAAAAAAAAAAAAAKQAAAABAwAACAACAAAAAAAFAAAAAAAAAPA/AwAAAAAABQAAAAAAAAAAAAgA
-        AgAAAAAAAwABAAAACwD//wMAAAAAAAsA//8IAAIAAAAAAAMAMgAAAAsAAAAIAAoAAABuAG8AbgBlAAAA
-        CwAAAAsAAAALAP//CwD//wsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAACYQAAA
-        7SsAAAs=
-</value>
-  </data>
   <data name="btnPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAWRJREFUaEPt
@@ -228,13 +217,20 @@
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5gYCDgUugr+7lAAAAPZJREFU
-        SEvt1s3qAVEYx/HZWUliIVlYsvS3wZVIIndhhWtQ9rJmjQ0lWy+3ILkEZeHt+9ScOulQp87QX371qWma
-        eX6LmTNnvP+SMKpoICInXCeGLk6+GpwmgT7OuPnacJY0hrhCFYgOnCSLCfThTkvyWMJUIKxLokghiRBK
-        WMM0XLEq+cMcB2wgBVOYBuusSppQN+5RwE4794xViVysbpThv5KX+Z6St7xdsk5mkHWyhayTMUyDdVYl
-        kscVX8QKpuGKdYkpOSxgKhBOSiQZBPoVVpH9ZITA9hMVeVYDXKBKWnCeOHqQ/f2IMgKJ/K1UUPePPxHP
-        uwOBwrpWgEJ6rgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAd
+        hQAAHYUB8Bsy7AAAAtxJREFUaEPdmr1qMlEQhhMEA4JgE5FUtrmAXIBeQXIBIqQLBFKo2KSPCrkA01ra
+        pU5naSMEIQg28adQELRJQPTkO8uEnKxvZue4u8J+DzzNy5yZWfLDruvRP9R/IgyjKAyjKAwPaiwWU/f3
+        92o8HqvlcqmazaY6OTmBtYwwPJh64Xa7rdw0Gg1YzwjDg5hMJtXLywut/pvRaATPMMIwdE9PT1W326W1
+        d9lsNvAcIwxD9ezsTL2+vtLKf4POMsIwNM/Pz9X7+zutyoPOM8IwFC8uLtRsNqM1vUE9GGEYuPl8Xq1W
+        K1pRBurDCMNAvbq6Uh8fH7SeHNSLEYaBeXNz4/wH2gfUjxGGgVitVmml/UA9GWHoy+PjY/X4+Ejr7A/q
+        zQjDvdUX0Wq1aBV/oP6MMITG43FVr9fVdDqlUT8UCgWnplwuU+If93wPYQit1Wo0Ypd0Ou3UDIdDSvzj
+        nu8hDKGTyYRG7PJdEyTmbIEwhHJIamwxZwuEIZRDUmOLOVsgDKEckhpbzNkCYQjlkNTYYs4WCEMoh6TG
+        FnO2QBhCOSQ1tpizBcIQyiGpscWcLRCGUA5JjS3mbIEwhHJIamwxZwuEIZRDUmOLOVsgDKEckhpbzNkC
+        YQjlkNTYYs4WCEMod9Oon0N0zXa7pcQ/7vkewhD68PBAI3bJZDJOzdvbGyX+cc/3EIZQ/WClLwb9ZK6v
+        r52a29tbSvzjnu8hDPdW/4o9PT3RKv5A/Rlh6Et9MfqR2C+oNyMMA/Hu7s7XHz/qyQjDwCwWi2q9XtNq
+        dqB+jDAM1MvLy+h/ZPptLpeL/ofY3+rXCvP5nNb0BvVghGFo6hc9+v2gBHSeEYahms1m1WAwoHX/Bp1l
+        hGHo6luaXq9HK+/y+fkJzzHC8CCmUinV6XRo9d/0+314hhGGBzORSKjn52da/4dKpQLrGWF4UPUtTalU
+        cm5GF4uF825Ff60D1TLCMIrCMIrCMGIeqS/rdnYz9yqxMgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="picture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -589,6 +585,17 @@
         THH4i2DmWQlUSmV+CQu82k0qIYhvcsyoDQ/GpX+GpURS3LCwgxFnDAwDOTAGiMthCaiU2Sq1c0bvxxMy
         S0C5/uJG87K9nbNeAig6XLl/gwcd7MQERxP/xAAUEQEAAAAAAAAAAAAAAAAAAACQ/9oACAECAQE/AFw/
         /8QAFBEBAAAAAAAAAAAAAAAAAAAAkP/aAAgBAwEBPwBcP//Z
+</value>
+  </data>
+  <data name="windowsMediaPlayer.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuQAAAAIB
+        AAAAAQAAAAAAAAAAAAAAAKQAAAABAwAACAACAAAAAAAFAAAAAAAAAPA/AwAAAAAABQAAAAAAAAAAAAgA
+        AgAAAAAAAwABAAAACwD//wMAAAAAAAsA//8IAAIAAAAAAAMAMgAAAAsAAAAIAAoAAABuAG8AbgBlAAAA
+        CwAAAAsAAAALAP//CwD//wsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAACYQAAA
+        7SsAAAs=
 </value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
